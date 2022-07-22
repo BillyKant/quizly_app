@@ -60,8 +60,8 @@ const userData = async (req, res, next) => {
 
     }
 
-    req.verifiedUser.user.quizzes = data.data.data.user?.quizzes ?? []
-    req.verifiedUser.user.submissions = data.data.data.user?.submissions ?? []
+    req.verifiedUser.user.quizzes = await data.data.data.user?.quizzes ?? []
+    req.verifiedUser.user.submissions = await data.data.data.user?.submissions ?? []
 
     next()
 }

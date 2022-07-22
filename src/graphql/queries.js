@@ -10,7 +10,7 @@ const users = {
     }
 }
 const quizes = {
-    type: new GraphQLList(UserType),
+    type: new GraphQLList(QuizType),
     description: 'Query all quizs in database',
     resolve(parent, args){
         return Quiz.find()
