@@ -15,7 +15,7 @@ const app = express()
 // Connecting MongoDB
 connectDB()
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT||443, () => {
     console.log(`Server now running on PORT: ${process.env.PORT}`)
 })
 
